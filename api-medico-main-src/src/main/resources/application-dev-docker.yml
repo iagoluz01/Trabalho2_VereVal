@@ -1,0 +1,24 @@
+server:
+  port: 8080
+
+spring:
+  application:
+        name: api-medicos
+  datasource:
+    url: jdbc:postgresql://lmt-database:5432/lmt
+    username: usuario
+    password: senha
+    driverClassName: org.postgresql.Driver
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+
+springdoc:
+  use-fqn: true
+  default-produces-media-type: application/json
+
+api:
+  name: Médico API
+  version: dev
+  description: RESTful API para médicos
